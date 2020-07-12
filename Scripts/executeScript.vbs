@@ -1,18 +1,19 @@
 Dim objShell
 Set objShell = Wscript.CreateObject("WScript.Shell")
 
-runCmd = "openAndsaveNotepad.ahk a"
-objShell.Run "cmd /c " & runCmd, 0, True
 
-
-runCmd = "openAndsaveNotepad.ahk b"
-objShell.Run "cmd /c " & runCmd, 0, True
-
-
-runCmd = "openAndsaveNotepad.ahk c"
-objShell.Run "cmd /c " & runCmd, 0, True
+openAndSaveCmd = "openAndsaveNotepad.ahk a"
+objShell.Run "cmd /c " & openAndSaveCmd, 0, true
 
 
 
-objShell.Run "writeTextOn.ahk ""user statistics for Windows Defender User Account"" ""a.txt - Notepad""" 
+changeFontCmd = "ChangeFont.ahk  ""a.txt - Notepad"" Courier ""Bold Oblique"" 15"
+objShell.Run "cmd /c " & changeFontCmd, 0, true
+
+
+
+writeTextCmd = "writeTextOn.ahk ""user statistics for Windows Defender User Account"" ""a.txt - Notepad"" " 
+objShell.Run "cmd /c " & writeTextCmd, 0, true
+
+
 
