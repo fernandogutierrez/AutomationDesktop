@@ -1,6 +1,6 @@
 ﻿WinWait, %1%
 WinActivate, %1%
-SetKeyDelay, 500
+SetKeyDelay, 200
 Send, !o
 Send, f
 WinActivate, Font
