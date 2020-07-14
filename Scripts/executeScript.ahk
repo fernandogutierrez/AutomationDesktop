@@ -20,4 +20,8 @@ else
 }
 
 RunWait, "copyDataFromRegedit.ahk"
+RunWait, "closeProgram.ahk" Calculator
+RunWait, "saveNote.ahk" b Min
+RunWait, "saveNote.ahk" c Max
+
 return
