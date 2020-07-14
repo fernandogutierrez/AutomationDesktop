@@ -1,11 +1,11 @@
 ﻿run, notepad.exe
 WinWait, Untitled - Notepad
 WinActivate,  Untitled - Notepad
-SetKeyDelay, 200
+SetKeyDelay, 500
 Send, ^{s}
 WinWait, Save As
 WinActivate,  Save As 
-ControlSend, edit1, %1%, Save As
+Send, %1%
 ControlClick, Save, Save As
 Send, {enter}
 Send, !y
