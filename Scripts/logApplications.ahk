@@ -27,28 +27,28 @@ insertBreakLine(windowName)
 }
 
 
+windowTitle = %1%.txt
 
-programName = "notepad.exe"
+programName := "notepad.exe"
 pid := openProgram(programName)
 Date := getCurrentDateTime()
-activateWindow("a.txt - Notepad")
-RunWait, "writeTextOn.ahk" "%Date% %pid% - %programName%" "a.txt - Notepad"
+activateWindow(windowTitle)
+RunWait, "writeTextOn.ahk" "%Date% %pid% - %programName%" %windowTitle%
 
 
 programName = "wordpad.exe"
 pid := openProgram(programName)
 Date := getCurrentDateTime()
-activateWindow("a.txt - Notepad")
-
-insertBreakLine("a.txt - Notepad")
-RunWait, "writeTextOn.ahk" "%Date% %pid% - %programName%" "a.txt - Notepad"
+activateWindow(windowTitle)
+insertBreakLine(windowTitle)
+RunWait, "writeTextOn.ahk" "%Date% %pid% - %programName%" %windowTitle%
 
 
 programName = "calc.exe"
 pid := openProgram(programName)
 Date := getCurrentDateTime()
-activateWindow("a.txt - Notepad")
-insertBreakLine("a.txt - Notepad")
-RunWait, "writeTextOn.ahk" "%Date% %pid% - %programName%" "a.txt - Notepad"
+activateWindow(windowTitle)
+insertBreakLine(windowTitle)
+RunWait, "writeTextOn.ahk" "%Date% %pid% - %programName%" %windowTitle%
 
 return
